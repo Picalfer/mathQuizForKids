@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/start_background"
+    tools:context=".QuestionsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/brainCompetition"
+            style="@style/brain_competition"
+            android:layout_marginTop="32dp"
+            android:text="@string/let_s_decide"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnStartQuestions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="30dp"
+            app:cardCornerRadius="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/brainCompetition"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/question"
+                android:contentDescription="@string/question"/>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/quest1"
+                android:src="@drawable/question"
+                style="@style/quest_icon" />
+            <ImageView
+                android:id="@+id/quest2"
+                android:src="@drawable/question"
+                style="@style/quest_icon" />
+            <ImageView
+                android:id="@+id/quest3"
+                android:src="@drawable/question"
+                style="@style/quest_icon" />
+            <ImageView
+                android:id="@+id/quest4"
+                android:src="@drawable/question"
+                style="@style/quest_icon" />
+            <ImageView
+                android:id="@+id/quest5"
+                android:src="@drawable/question"
+                style="@style/quest_icon" />
+            <ImageView
+                android:id="@+id/quest6"
+                android:src="@drawable/question"
+                style="@style/quest_icon" />
+            <ImageView
+                android:id="@+id/quest7"
+                android:src="@drawable/question"
+                style="@style/quest_icon" />
+            <ImageView
+                android:id="@+id/quest8"
+                android:src="@drawable/question"
+                style="@style/quest_icon" />
+            <ImageView
+                android:id="@+id/quest9"
+                android:src="@drawable/question"
+                style="@style/quest_icon" />
+            <ImageView
+                android:id="@+id/quest10"
+                android:src="@drawable/question"
+                style="@style/quest_icon" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

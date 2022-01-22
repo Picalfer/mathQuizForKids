@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">appForResume</string>
+    <string name="brain_competition"><u>Brain competition</u></string>
+    <string name="play">Play!</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="let_s_decide">Let\'s decide!</string>
+    <string name="question">question</string>
+    <string name="question1">What is 2 + 2?</string>
+    <string name="question2">What is 3 + 9?</string>
+    <string name="question3">What is 7 * 7?</string>
+    <string name="question4">What is 20 – 9?</string>
+    <string name="question5">What is 23 + 15?</string>
+    <string name="question6">What is 25 + 25?</string>
+    <string name="question7">What is 37 – 20?</string>
+    <string name="question8">What is 12 – 9?</string>
+    <string name="question9">What is 37 * 0?</string>
+    <string name="question10">What is 6 / 2?</string>
+    <string name="enter_solution">Enter your solution here</string>
+    <string name="ques_1">Question 1</string>
+    <string name="ques_2">Question 2</string>
+    <string name="ques_3">Question 3</string>
+    <string name="ques_4">Question 4</string>
+    <string name="ques_5">Question 5</string>
+    <string name="ques_6">Question 6</string>
+    <string name="ques_7">Question 7</string>
+    <string name="ques_8">Question 8</string>
+    <string name="ques_9">Question 9</string>
+    <string name="ques_10">Question 10</string>
+    <string name="check_out">check out</string>
+    <string name="to_next">To next</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="normal">You are good!</string>
+    <string name="bad">Try to repeat!)</string>
+</resources>
