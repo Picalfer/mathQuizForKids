@@ -23,7 +23,7 @@ class ResultFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        dataModel.scoreToResult.observe(activity as LifecycleOwner, {
+        dataModel.scoreToResult.observe(activity as LifecycleOwner) {
             val result = "You scored $it/10 points!"
             b.result.text = result
             when {
@@ -40,7 +40,7 @@ class ResultFragment : Fragment() {
                     b.congratulationImage.setImageResource(R.drawable.firework)
                 }
             }
-        })
+        }
         b.toNext.setOnClickListener {
             activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.main, StartFragment.newInstance())?.commit()
         }

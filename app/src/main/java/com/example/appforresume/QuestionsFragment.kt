@@ -1,12 +1,11 @@
 package com.example.appforresume
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.GONE
 import android.view.ViewGroup
-import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LifecycleOwner
 import com.example.appforresume.databinding.FragmentQuestionsBinding
@@ -28,7 +27,7 @@ class QuestionsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        dataModel.messageToQuestFrag1.observe(activity as LifecycleOwner,{
+        dataModel.messageToQuestFrag1.observe(activity as LifecycleOwner) {
             if (it) {
                 when (counter) {
                     2 -> b.quest1.setImageResource(R.drawable.right_box)
@@ -57,14 +56,14 @@ class QuestionsFragment : Fragment() {
                     11 -> b.quest10.setImageResource(R.drawable.wrong_box)
                 }
             }
-        })
-        dataModel.turnOnClickable.observe(activity as LifecycleOwner, {
+        }
+        dataModel.turnOnClickable.observe(activity as LifecycleOwner) {
             b.btnStartQuestions.isClickable = it
-        })
+        }
         b.btnStartQuestions.setOnClickListener{
             b.btnStartQuestions.isClickable = false
             when (counter) {
-                11 -> {
+                1 -> {
                     activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.btnStartQuestions, Question1())
                         ?.commit()
                 }
@@ -104,17 +103,17 @@ class QuestionsFragment : Fragment() {
                     activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.btnStartQuestions, Question10())
                         ?.commit()
                 }
-                1 -> {
+                11 -> {
                     activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.btnStartQuestions, ResultFragment())
                         ?.commit()
-                    dataModel.scoreToResult.value = 10
+                    dataModel.scoreToResult.value = score
                 }
             }
             counter++
         }
-        dataModel.scoreToResult.observe(activity as LifecycleOwner, {
+        dataModel.scoreToResult.observe(activity as LifecycleOwner) {
             b.brainCompetition.visibility = GONE
-        })
+        }
     }
 
     companion object {

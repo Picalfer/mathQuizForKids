@@ -2,16 +2,15 @@ package com.example.appforresume.questions
 
 import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.appforresume.DataModel
 import com.example.appforresume.R
 import com.example.appforresume.databinding.FragmentQuestion10Binding
-import com.example.appforresume.databinding.FragmentQuestion7Binding
 
 class Question10 : Fragment() {
     private val dataModel: DataModel by activityViewModels()
@@ -20,14 +19,14 @@ class Question10 : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         b = FragmentQuestion10Binding.inflate(inflater)
         return b.root
     }
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        var result: Boolean = false
+        var result = false
         b.checkOut.setOnClickListener{
             if (!isFieldEmpty()) {
                 result = if (b.answer.text.toString() == "3") {

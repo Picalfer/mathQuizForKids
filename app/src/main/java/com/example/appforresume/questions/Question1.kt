@@ -1,23 +1,17 @@
 package com.example.appforresume.questions
 
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.VISIBLE
 import android.view.ViewGroup
-import android.widget.ImageButton
-import android.widget.ImageView
 import androidx.annotation.RequiresApi
-import androidx.cardview.widget.CardView
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.appforresume.DataModel
 import com.example.appforresume.QuestionsFragment
 import com.example.appforresume.R
-import com.example.appforresume.databinding.FragmentStartBinding
 import com.example.appforresume.databinding.Question1Binding
 
 class Question1 : Fragment() {
@@ -28,14 +22,14 @@ class Question1 : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         b = Question1Binding.inflate(inflater)
         return b.root
     }
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        var result: Boolean = false
+        var result = false
         b.checkOut.setOnClickListener{
             if (!isFieldEmpty()) {
                 result = if (b.answer.text.toString() == "4") {
