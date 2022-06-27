@@ -3,7 +3,7 @@ package com.example.appforresume
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-open class DataModel: ViewModel() {
+open class DataModel : ViewModel() {
     val messageToQuestFrag1: MutableLiveData<Boolean> by lazy {
         MutableLiveData<Boolean>()
     }
