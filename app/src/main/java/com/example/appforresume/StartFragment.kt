@@ -1,10 +1,10 @@
 package com.example.appforresume
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.appforresume.databinding.FragmentStartBinding
 
 class StartFragment : Fragment() {
@@ -13,15 +13,16 @@ class StartFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         b = FragmentStartBinding.inflate(inflater)
         return b.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        b.bPlay.setOnClickListener{
-            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.main, QuestionsFragment())
+        b.bPlay.setOnClickListener {
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.replace(R.id.main, QuestionsFragment())
                 ?.commit()
         }
     }

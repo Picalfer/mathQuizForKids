@@ -31,4 +31,5 @@
     <string name="congratulations">Congratulations!</string>
     <string name="normal">You are good!</string>
     <string name="bad">Try to repeat!)</string>
+    <string name="forgot_text">"Don't forget to enter the answer)"</string>
 </resources>

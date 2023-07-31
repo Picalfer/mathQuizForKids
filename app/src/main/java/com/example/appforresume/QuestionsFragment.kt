@@ -9,7 +9,16 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LifecycleOwner
 import com.example.appforresume.databinding.FragmentQuestionsBinding
-import com.example.appforresume.questions.*
+import com.example.appforresume.questions.Question1
+import com.example.appforresume.questions.Question10
+import com.example.appforresume.questions.Question2
+import com.example.appforresume.questions.Question3
+import com.example.appforresume.questions.Question4
+import com.example.appforresume.questions.Question5
+import com.example.appforresume.questions.Question6
+import com.example.appforresume.questions.Question7
+import com.example.appforresume.questions.Question8
+import com.example.appforresume.questions.Question9
 
 class QuestionsFragment : Fragment() {
 
@@ -20,7 +29,7 @@ class QuestionsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         b = FragmentQuestionsBinding.inflate(inflater)
         return b.root
@@ -70,51 +79,61 @@ class QuestionsFragment : Fragment() {
                         ?.replace(R.id.btnStartQuestions, Question1())
                         ?.commit()
                 }
+
                 2 -> {
                     activity?.supportFragmentManager?.beginTransaction()
                         ?.replace(R.id.btnStartQuestions, Question2())
                         ?.commit()
                 }
+
                 3 -> {
                     activity?.supportFragmentManager?.beginTransaction()
                         ?.replace(R.id.btnStartQuestions, Question3())
                         ?.commit()
                 }
+
                 4 -> {
                     activity?.supportFragmentManager?.beginTransaction()
                         ?.replace(R.id.btnStartQuestions, Question4())
                         ?.commit()
                 }
+
                 5 -> {
                     activity?.supportFragmentManager?.beginTransaction()
                         ?.replace(R.id.btnStartQuestions, Question5())
                         ?.commit()
                 }
+
                 6 -> {
                     activity?.supportFragmentManager?.beginTransaction()
                         ?.replace(R.id.btnStartQuestions, Question6())
                         ?.commit()
                 }
+
                 7 -> {
                     activity?.supportFragmentManager?.beginTransaction()
                         ?.replace(R.id.btnStartQuestions, Question7())
                         ?.commit()
                 }
+
                 8 -> {
                     activity?.supportFragmentManager?.beginTransaction()
                         ?.replace(R.id.btnStartQuestions, Question8())
                         ?.commit()
                 }
+
                 9 -> {
                     activity?.supportFragmentManager?.beginTransaction()
                         ?.replace(R.id.btnStartQuestions, Question9())
                         ?.commit()
                 }
+
                 10 -> {
                     activity?.supportFragmentManager?.beginTransaction()
                         ?.replace(R.id.btnStartQuestions, Question10())
                         ?.commit()
                 }
+
                 11 -> {
                     activity?.supportFragmentManager?.beginTransaction()
                         ?.replace(R.id.btnStartQuestions, ResultFragment())

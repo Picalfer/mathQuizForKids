@@ -18,34 +18,34 @@ class Question5 : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         b = FragmentQuestion5Binding.inflate(inflater)
         return b.root
     }
 
     @RequiresApi(Build.VERSION_CODES.M)
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) = with(b) {
         var result = false
-        b.checkOut.setOnClickListener{
+        checkOut.setOnClickListener {
             if (!isFieldEmpty()) {
-                result = if (b.answer.text.toString() == "38") {
-                    b.backgroundQuest.setBackgroundColor(resources.getColor(R.color.right, null))
-                    b.imQuest.setImageResource(R.drawable.correct)
+                result = if (answer.text.toString() == "38") {
+                    backgroundQuest.setBackgroundColor(resources.getColor(R.color.right, null))
+                    imQuest.setImageResource(R.drawable.correct)
                     true
                 } else {
-                    b.backgroundQuest.setBackgroundColor(resources.getColor(R.color.wrong, null))
-                    b.imQuest.setImageResource(R.drawable.wrong)
+                    backgroundQuest.setBackgroundColor(resources.getColor(R.color.wrong, null))
+                    imQuest.setImageResource(R.drawable.wrong)
                     false
                 }
-                b.checkOut.isClickable = false
-                b.answer.isFocusable = false
-                b.toNext.visibility = View.VISIBLE
+                checkOut.isClickable = false
+                answer.isFocusable = false
+                toNext.visibility = View.VISIBLE
             }
             dataModel.messageToQuestFrag1.value = result
         }
-        b.toNext.setOnClickListener{
-            activity?.supportFragmentManager?.beginTransaction()?.remove(this)?.commit()
+        toNext.setOnClickListener {
+            activity?.supportFragmentManager?.beginTransaction()?.remove(this@Question5)?.commit()
             dataModel.turnOnClickable.value = true
         }
     }
@@ -57,7 +57,7 @@ class Question5 : Fragment() {
 
     private fun isFieldEmpty(): Boolean {
         b.apply {
-            if(answer.text.isNullOrEmpty()) answer.error = "Don't forget to enter the answer)"
+            if (answer.text.isNullOrEmpty()) answer.error = getString(R.string.forgot_text)
             return answer.text.isNullOrEmpty()
         }
     }

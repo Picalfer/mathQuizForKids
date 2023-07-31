@@ -1,10 +1,10 @@
 package com.example.appforresume
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LifecycleOwner
 import com.example.appforresume.databinding.FragmentResultBinding
@@ -16,9 +16,9 @@ class ResultFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
-        b  = FragmentResultBinding.inflate(inflater)
+        b = FragmentResultBinding.inflate(inflater)
         return b.root
     }
 
@@ -31,10 +31,12 @@ class ResultFragment : Fragment() {
                     b.congratulation.text = getString(R.string.bad)
                     b.congratulationImage.setImageResource(R.drawable.bad)
                 }
+
                 it in 5..7 -> {
                     b.congratulation.text = getString(R.string.normal)
                     b.congratulationImage.setImageResource(R.drawable.normal)
                 }
+
                 else -> {
                     b.congratulation.text = getString(R.string.congratulations)
                     b.congratulationImage.setImageResource(R.drawable.firework)
@@ -42,7 +44,8 @@ class ResultFragment : Fragment() {
             }
         }
         b.toNext.setOnClickListener {
-            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.main, StartFragment.newInstance())?.commit()
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.replace(R.id.main, StartFragment.newInstance())?.commit()
         }
     }
 
